@@ -1,4 +1,5 @@
-//Example fetch using pokemonapi.co
+//Use Postman.com to test API's !
+
 document.querySelector('button').addEventListener('click', getFetch)
 
 function getFetch(){
@@ -13,12 +14,14 @@ function getFetch(){
         if(data.media_type === "image"){
           document.querySelector('img').src = data.hdurl
         }else if(data.media_type === 'video'){
+          document.querySelector('iframe')
           document.querySelector('iframe').src = data.url
         }else{
-          alert('Media Not Supported - Contact NASA IMMEDIATLY')
+          alert('Media not supported - please choose a different date')
         }
        
-        document.querySelector('h3').innerText = data.explanation
+        document.querySelector('p').innerText = data.explanation
+        document.querySelector('h2').innerText = data.title
       })
       .catch(err => {
           console.log(`error ${err}`)
