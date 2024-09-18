@@ -12,9 +12,10 @@ function getFetch(){
       .then(data => {
         console.log(data)
         if(data.media_type === "image"){
+          document.querySelector('img').classList.add("showImage")
           document.querySelector('img').src = data.hdurl
         }else if(data.media_type === 'video'){
-          document.querySelector('iframe')
+          document.querySelector('iframe').classList.add("showIframe")
           document.querySelector('iframe').src = data.url
         }else{
           alert('Media not supported - please choose a different date')

@@ -24,6 +24,18 @@ input[type="date"] {
   color-scheme: dark;
 }
 
+.button {
+  background-color: red;
+  border-radius: 2px;
+  text-align: center;
+  opacity: 0.8;
+  transition: 0.3s;
+  font-size: 2rem;
+}
+
+.button:hover {
+  opacity: 1;
+}
 
 body {
   background: black;
@@ -43,9 +55,23 @@ h3{
 }
 
 img{
+  display: none;
+}
+
+iframe {
+  display: none;
+}
+
+.showImage {
   display: block;
   height: auto;
-  width: 50vh;
+  width: 50vw;
+}
+
+.showIframe {
+  display: block;
+  height: auto;
+  width: 50vw;
 }
 
 
